@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Larizz Farm</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background-image: url('Background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+}
+
+/* HERO */
+.hero{
+  padding:30px 20px;
+}
+
+
+.logo-wrap img{
+  width:140px;
+  filter:drop-shadow(0 0 8px rgba(37,211,102,0.5));
+}
+
+@keyframes fadeDown {
+  from {opacity:0; transform:translateY(-20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+/* BOX */
+.box {
+  background: rgba(0,0,0,0.55);
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+  max-width: 650px;
+}
+
+/* STOCK */
+.stock {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ffeb3b;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 18px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.05);}
+  100% {transform: scale(1);}
+}
+
+/* KATALOG */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  padding:20px;
+}
+
+.card{
+  background: rgba(0,0,0,0.55);
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+  max-width: 650px;
+}
+
+.card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:10px;
+}
+
+.badge{
+  background:#25D366;
+  display:inline-block;
+  padding:3px 8px;
+  font-size:12px;
+  border-radius:6px;
+}
+
+.card h3{
+  margin:5px 0;
+  color:#25D366;
+}
+
+/* INFO SECTION */
+.info {
+  text-align:center;
+  max-width: 700px;
+  margin: 20px auto;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.info h2 {
+  text-align: center;
+  color: #25D366;
+}
+
+/* WA FLOAT */
+.wa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* HR */
+hr {
+  border: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+  margin: 10px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+
+<div class="logo-wrap">
+  <img src="logo.png">
+</div>
+
+<div class="box">
+📦 Sistem Antrian Real-Time
+</div>
+
+<div class="box stock" id="counter">
+🔄 Loading data...
+</div>
+
+<div class="box stock" id="stok">
+🔥 Hitung stok...
+</div>
+
+<!-- KATALOG -->
+
+<div class="grid">
+
+<div class="card">
+<div class="badge">KAMPUNG</div>
+<h3>Sengkuni</h3>
+<p>Tahan cuaca, cocok pemula</p>
+</div>
+
+<div class="card">
+<div class="badge">FAST GROW</div>
+<h3>Kuntara 4</h3>
+<p>Cepat besar & efisien pakan</p>
+</div>
+
+<div class="card">
+<div class="badge">PETELUR</div>
+<h3>Elba</h3>
+<p>Produksi telur stabil</p>
+</div>
+
+<div class="card">
+<div class="badge">PREMIUM</div>
+<h3>Black Permud 3</h3>
+<p>Nilai jual tinggi</p>
+</div>
+
+<div class="card">
+<div class="badge">HEMAT</div>
+<h3>KUB 2</h3>
+<p>Tahan penyakit & hemat pakan</p>
+</div>
+
+<div class="card">
+<div class="badge">PEDAGING</div>
+<h3>Joper</h3>
+<p>Cepat panen & bobot besar</p>
+</div>
+
+</div>
+
+<!-- BUTTON ORDER -->
+<a class="btn"
+href="https://docs.google.com/forms/d/e/1FAIpQLScLEeD-S4K6UvEe5KLiWUR0lI3nZEwkvdDyB1ZcxzBSs1IWGg/viewform"
+target="_blank">
+📝 Pesan DOC Sekarang
+</a>
+
+<!-- INFO PEMESANAN -->
+<div class="info">
+
+<h2>📦 INFO PEMESANAN & PENGIRIMAN</h2>
+
+<p>
+<b>💰 Harga Produk</b><br>
+Harga setiap DOC tertera langsung di Google Form pemesanan<br>
+👉 Isi form untuk pilih jenis & lihat harga
+</p>
+
+<hr>
+
+<p><b>🚚 Sistem Pengiriman</b></p>
+
+<p>
+<b>📦 Box </b><br>
+Isi 100 + 2 Pengiriman di hari senin
+</p>
+
+<p>
+<b>🐥 Ecer</b><br>
+Minimal order 10 DOC Pengiriman di hari Kamis & Jumat
+</p>
+
+<p>
+<b>🏙️ Jabodetabek (COD)</b><br>
+Sabtu & Minggu • Bayar di tempat
+</p>
+
+<p>
+<b>🚆 Luar Jabodetabek</b><br>
+Via KAI Logistik (Kalog) & KI8 • Packing aman
+</p>
+
+<hr>
+
+<p>
+<b>⚠️ Catatan</b><br>
+• Stok terbatas setiap minggu<br>
+• Sistem antrian berlaku<br>
+• Prioritas dari Google Form
+</p>
+
+</div>
+
+</div>
+
+<!-- WA FLOAT -->
+<a class="wa" href="https://wa.me/62811542398">
+💬 Chat WA
+</a>
+
+<script>
+
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTTgOzgy0TYrM4hMU0Vd5vi6rv4eyTWuz_Gelhz37c9XN7ZCmSi26ig4yIfRIgnF64VHwxvjd22Hnbl/pubhtml?gid=0&single=true";
+
+const STOK_AWAL = 200;
+let last = 0;
+
+async function loadData(){
+  try{
+    const res = await fetch(SHEET_URL);
+    const text = await res.text();
+
+    const rows = (text.match(/<tr/gi)||[]).length - 1;
+
+    document.getElementById("counter").innerHTML =
+      "🔥 " + rows + " orang sudah masuk antrian";
+
+    let sisa = STOK_AWAL - rows;
+    if(sisa < 0) sisa = 0;
+
+    document.getElementById("stok").innerHTML =
+      "⚠️ Sisa stok DOC: " + sisa + " ekor";
+
+  }catch(e){
+    document.getElementById("counter").innerHTML =
+      "⚠️ Data sedang update...";
+  }
+}
+
+loadData();
+setInterval(loadData, 10000);
+
+</script>
+
+</body>
+</html>
+
